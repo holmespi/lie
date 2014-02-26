@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block js %}
+	<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui-1.10.2.min.js' %}"></script>
+	<script src="{% static 'js/jquery.nerveSlider.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/nerveSlider.min.css' %}">
+{% endblock %}
+
+{% block js_call%}
+<script>
+	$(document).ready(function(){
+		$(".test").nerveSlider({
+			slideTransitionSpeed: 1000,
+			slideTransitionEasing: "easeOutExpo"
+			});
+	});
+</script>
+{% endblock %}
+
+		{% block content %}
+		<div class="section">
+			<div class="test">
+				{% for slide in slides %}
+				<img src="/media/{{ slide.images }}" alt="{{ slide.test }}" />
+				{% endfor %}
+				<img src="http://sska.ml/promo_page/img/slider_4.jpg">
+				<img src="http://sska.ml/promo_page/img/slider_3.jpg">
+				<img src="http://sska.ml/promo_page/img/slide3.jpg">
+			</div>
+		</div>
+		{% endblock %}
