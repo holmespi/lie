@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-
+from content import views
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -15,5 +15,19 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'/', 'templates/home.html'),
+    url(r'^$', views.home, name='home'),
+
+	url(r'^collections/', views.collections, name='collections'),
+
+	url(r'^contact/', views.contact, name='contact'),
+
+	url(r'^deadstock/', views.deadstock, name='deadstock'),
+
+	url(r'^news/', views.news, name='home'),
+
+	url(r'^stockists/', views.stockists, name='stockists'),
+
+	url(r'^store/', views.store, name='store'),
+
+
 )
