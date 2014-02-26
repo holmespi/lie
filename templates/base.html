@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+	<!-- If you are reading this you are probably a little nerdy, and I
+	respect that, so here is some info: 
+	I built this project in Python using Django.  These templates are
+	Created with the Jinja2 templating engine.  Visit my site at
+			<<<<<<<< sska.ml >>>>>>>>>>>
+	to contact me with any inquiries. 	With love, Paul H.				-->
+	<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+	<title>{{ page_title }}</title>
+	<meta name="description" content="{{ page_desc }}">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta property="og:title" content="{{ page_title }}" />
+	<meta property="og:type" content="{{ page_type }}" />
+	<meta property="og:image" content="{{ page_image }}" />
+	<meta name="og:description" content="{{ page_desc }}">
+	<!-- css (sorry, i think 'the.css' sounds better than our 'style.css' convention (the later is too repetative.)) -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/the.css' %}">
+	<!-- js (and associated css) -->
+	{% block js %}{% endblock %}
+</head>
+<body>
+
+
+{% block js_call%}
+{% endblock %}
+
+
+<div id="wrapper">
+	<div id="logo">
+		<a href="/">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 	width="250px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
+			<g>
+			<path id="svg_logo" d="M95,53.004c200.66-0.01,401.32,0,601.99,0c0,169.31,0,338.63,0,507.94c-200.67,0-401.33,0.01-601.99,0
+			C95,391.634,95.01,222.324,95,53.004 M150.42,507.254c163.84,0,327.67-0.06,491.5,0.04c0.59-19.77,0.02-39.57,0.24-59.35
+			c-0.03-111.69-0.07-223.37,0.01-335.06c-0.14-1.1-0.34-2.18-0.62-3.24c-50.17,0.23-100.33,0.03-150.49,0.1
+			c-113.53-0.02-227.05,0.03-340.58-0.02C150.34,242.234,150.45,374.744,150.42,507.254 M191.68,146.544
+			c17.96-0.06,35.91,0.01,53.87-0.04c-0.02,93.09,0,186.17-0.01,279.25c23.4,0.01,46.8-0.01,70.2,0.01c0.01,14.81,0,29.61,0,44.41
+			c-41.34,0.08-82.69,0.03-124.03,0.03C191.68,362.314,191.73,254.424,191.68,146.544 M361.45,470.244
+			c-0.11-107.91,0-215.83-0.05-323.75c17.94,0.06,35.89,0,53.84,0.04c-0.03,107.89,0,215.78-0.02,323.67
+			C397.3,470.244,379.37,470.164,361.45,470.244 M478.57,470.214c-0.07-107.9,0.01-215.79-0.04-323.69
+			c40.7-0.01,81.41,0.01,122.12-0.01c-0.02,16.34-0.04,32.69,0.01,49.03c-22.75-0.02-45.5,0.02-68.24-0.02
+			c0.02,28.27-0.06,56.53,0.03,84.8c16.35-0.04,32.7-0.04,49.05,0c-0.08,17.29-0.01,34.58-0.03,51.87
+			c-16.35-0.01-32.71,0.02-49.06-0.02c0.06,29.67-0.1,59.35,0.08,89.02c22.72-0.1,45.44-0.01,68.15-0.04
+			c-0.04,16.35,0.29,32.72-0.06,49.08C559.91,470.194,519.24,470.224,478.57,470.214L478.57,470.214z"/>
+			</g>
+		</svg>
+	</a>
+	</div>
+
+	<div id="nav">
+		<ul>
+			<li><a href="store/">Store</a></li>
+			<li><a href="deadstock/">Deadstock</a></li>
+			<li><a href="collections/">Collections</a></li>
+			<li><a href="news/">News</a></li>
+			<li><a href="contact/">Contact</a></li>		
+		</ul>
+	</div>
+
+	<div class="content">
+		{% block content %}
+		
+		{% endblock %}
+	</div><!-- end .content -->
+
+
+</div><!--end #wrapper-->
+</body>
+</html>
