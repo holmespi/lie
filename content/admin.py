@@ -4,7 +4,9 @@ from content.models import Product
 from content.models import Stockist
 from content.models import Categories
 from content.models import Collection
+from content.models import Slider
 
+admin.site.register(Slider)
 
 admin.site.register(Categories)
 
