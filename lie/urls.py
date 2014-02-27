@@ -28,8 +28,9 @@ urlpatterns = patterns('',
 
 	url(r'^stockists/', views.stockists, name='stockists'),
 
-	url(r'^store/', views.store, name='store'),
+    url(r'^store/product/(?P<slug>[\w\-]+)/$', views.product_single, name='product_single'),
 
+	url(r'^store/', views.store, name='store'),
 
 )
 
