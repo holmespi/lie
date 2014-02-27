@@ -17,6 +17,7 @@ admin.site.register(Post, PostAdmin)
 
 class ProductAdmin(admin.ModelAdmin):
 	list_display = ('name','price','stock')
+	# prepopulated_fields = {'slug': ('title'), }
 
 admin.site.register(Product, ProductAdmin)
 
