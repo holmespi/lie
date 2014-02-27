@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for collection in collections %}
+	<div class="collection">
+		<a href="{{ collection.link }}"><img class="collection_photo" src="{{ MEDIA_URL }}{{ collection.photo }}" />
+		<p class="collection_name">{{ collection.name }}</p>
+	</div>
+
+{% endfor %}
+
+{% endblock %}

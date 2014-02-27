@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+	<!--add a categories drop down up here -->
+
+	<!-- also add a shopping cart link up here (or maybe in the nav?) -->
+
+	<!-- and heres the product list-->
+	{% for product in products %}
+
+		<div class="prod_thumb">
+			<a href="#"><img src="{{ MEDIA_URL }}{{ product.thumb }}" /></a>
+			<span class="text">
+				<h1 class="prod_name">{{ product.name }}</h1>
+				<h2 class="prod price">{{ product.price}}</h2>
+			</span>
+		</div>
+
+	{% endfor %}
+
+{% endblock %}
