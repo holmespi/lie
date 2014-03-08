@@ -4,7 +4,7 @@
 
 {% for post in posts %}
 	<div class="blog_post">
-		<h1 class="blog_title">{{ post.title }}</h1>
+		<a href="/news/{{ post.slug }}/" ><h1 class="blog_title">{{ post.title }}</h1></a>
 		<img class="blog_photo" src="{{ MEDIA_URL }}{{ post.photo }}" />
 		<p class="blog_desc">{{ post.description }}</p>
 	</div>

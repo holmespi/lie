@@ -17,6 +17,7 @@ class Categories(models.Model):
 
 class Post(models.Model):
 	title = models.CharField(max_length=128, unique=True)
+	slug = models.SlugField(max_length=128, unique=True)
 	date = models.DateField(auto_now=True)
 	description = models.TextField()
 	photo = models.FileField(upload_to='news') #change this to a URLField for production or else find a way to manage ftp uploads from django admin

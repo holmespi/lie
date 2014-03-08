@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block js %}
-	<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
-	<script src="{% static 'js/jquery-ui-1.10.2.min.js' %}"></script>
 	<script src="{% static 'js/jquery.nerveSlider.min.js' %}"></script>
 	<link rel="stylesheet" href="{% static 'css/nerveSlider.min.css' %}">
 {% endblock %}
@@ -10,9 +8,19 @@
 {% block js_call%}
 <script>
 	$(document).ready(function(){
-		$(".test").nerveSlider({
+		$("#slideshow").nerveSlider({
 			slideTransitionSpeed: 1000,
-			slideTransitionEasing: "easeOutExpo"
+			slideTransitionEasing: "swing",
+			slidesDraggable: true,
+			sliderResizable: true,
+			sliderKeepAspectRatio: false,
+			slideTransitionDelay: 12000,
+			showTimer: false,
+			showPause: false,
+			showDots: false,
+			showArrows: false,	
+			sliderWidth: "103%",
+			sliderHeight: "385px",
 			});
 	});
 </script>
@@ -20,7 +28,7 @@
 
 		{% block content %}
 		<div class="section">
-			<div class="test">
+			<div id="slideshow">
 				{% for slide in slides %}
 				<img src="{{ MEDIA_URL }}{{ slide.images }}" alt="{{ slide.test }}" />
 				{% endfor %}

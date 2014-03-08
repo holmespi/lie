@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block js %}
+<link rel="stylesheet" href="{% static 'css/jquery-jvectormap-1.2.2.css' %}" />
+<script src="{% static 'js/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-world-mill-en.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="world-map" style="height: 350px;"></div>
+{% endblock %}
+
+
+{% block js_call %}
+<script>
+    jQuery(function(){
+      jQuery('#world-map').vectorMap();
+    });
+</script>
+{% endblock %}

@@ -1,8 +1,8 @@
 # Create your views here.
-
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
+from django.contrib.syndication.views import Feed
 from content.models import Slider
 from content.models import Product
 from content.models import Post
@@ -41,7 +41,7 @@ def product_single(request, slug):
 
 	product = get_object_or_404(Product, slug=slug)
 	context_dict = {
-	'page_title': 'Love is Earth - Store %s' % product.name,
+	'page_title': 'Love is Earth - Store - %s' % product.name,
 	'page_desc': 'Welcome to the store, here you can purchase LIE merchandise.  We will ship directly from our headquarters in the USA to you.',
 	'page_type': 'product',
 	'page_image': ''
@@ -76,6 +76,20 @@ def news(request):
 
 	return render_to_response('news.html', context_dict, context)
 
+def news_single(request, slug):
+	context = RequestContext(request)
+
+	post = get_object_or_404(Post, slug=slug)
+	context_dict = {
+	'page_title': 'Love is Earth - News - %s' % post.title,
+	'page_desc': 'Featured news for Love is Earth.  Find any upcoming events, shows, new releases, sale information.',
+	'page_type': 'blog',
+	'page_image': ''
+	}
+	context_dict['post'] = post
+
+	return render_to_response('news_single.html', context_dict, context)
+
 def contact(request):
 	context = RequestContext(request)
 
@@ -99,3 +113,33 @@ def stockists(request):
 	context = RequestContext(request)
 
 	return render_to_response('stockists.html', context)
+
+
+##Feeds
+
+class latestNews(Feed):
+	title = 'Love is Earth - News Feed'
+	link = '/news/'
+	description = 'The latest news and updates from Love is Earth'
+
+	def items(self):
+		return Post.objects.order_by('-id')
+
+	def item_title(self, item):
+		return item.title
+
+	def item_description(self, item):
+		return item.description
+
+	def item_link(self, item):
+		return reverse('news-item', args=[item.pk])
+
+
+
+
+
+
+
+
+
+

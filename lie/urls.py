@@ -24,6 +24,8 @@ urlpatterns = patterns('',
 
 	url(r'^deadstock/', views.deadstock, name='deadstock'),
 
+    url(r'^news/(?P<slug>[\w\-]+)/$', views.news_single, name='news_single'),
+
 	url(r'^news/', views.news, name='home'),
 
 	url(r'^stockists/', views.stockists, name='stockists'),

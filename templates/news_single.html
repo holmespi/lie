@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	
+	<!-- and heres the news item-->
+		
+		<div class="blog_post">
+			<a href="/news/{{ post.slug }}/" ><h1 class="blog_title">{{ post.title }}</h1></a>
+			<img class="blog_photo" src="{{ MEDIA_URL }}{{ post.photo }}" />
+			<p class="blog_desc">{{ post.description }}</p>
+		</div>
+
+
+{% endblock %}

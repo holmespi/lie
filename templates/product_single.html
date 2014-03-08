@@ -13,7 +13,8 @@
 			<img src="{{ MEDIA_URL }}{{ product.thumb }}" />
 			<span class="text">
 				<h1 class="prod_name">{{ product.name }}</h1>
-				<h2 class="prod price">{{ product.price}}</h2>
+				<p class="prod_desc">{{ product.description }}</p>
+				<h2 class="prod price">${{ product.price }}</h2>
 			</span>
 		</div>
 
