@@ -1,5 +1,7 @@
 # Django settings for lie project.
-
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+'django.core.context_processors.request',)
 # Paths to places
 import os
 SETTINGS_DIR = os.path.dirname(__file__)
