@@ -2,7 +2,7 @@
 $bs: "screen and (max-width: 480px)";
 $bm: "screen and (min-width: 321px) and (max-width: 768px)";
 $bl: "screen and (max-width: 950px)";
-
+$dark: #1F1F1F;
 
 /* STYLES */
 
@@ -10,6 +10,11 @@ hr {
 	color: black;
 	background-color: black;
 	height: 1px;
+}
+
+#container {
+	width: 80%;
+	margin: 0 auto;
 }
 
 #social {
@@ -104,7 +109,7 @@ hr {
 
 		a {
 			text-decoration: none;
-			color: black;
+			color: $dark;
 			font-size: 14px;
 			font-weight: 600;
 			font-family: helvetica;
@@ -126,5 +131,30 @@ hr {
 	overflow: hidden;
 }
 
+/* store */
+
+.prod_thumb {
+	float: left;
+	margin-left: 110px;
+	img {
+		width: 300px;
+	}
+
+
+}
+
+.prod_text {
+	margin: 0 auto;
+	margin-top: -20px;
+	font-family: helvetica;
+	a {
+		text-decoration: none;
+		color: $dark;
+	}
+
+	.prod_name {
+		text-align: center;
+	}
+}
 
 

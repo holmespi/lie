@@ -5,6 +5,10 @@ hr {
   background-color: black;
   height: 1px; }
 
+#container {
+  width: 80%;
+  margin: 0 auto; }
+
 #social {
   float: right; }
   @media screen and (max-width: 480px) {
@@ -74,7 +78,7 @@ hr {
         float: right; } }
     #nav_links li a {
       text-decoration: none;
-      color: black;
+      color: #1f1f1f;
       font-size: 14px;
       font-weight: 600;
       font-family: helvetica;
@@ -87,3 +91,20 @@ hr {
 #slideshow {
   right: 8px;
   overflow: hidden; }
+
+/* store */
+.prod_thumb {
+  float: left;
+  margin-left: 110px; }
+  .prod_thumb img {
+    width: 300px; }
+
+.prod_text {
+  margin: 0 auto;
+  margin-top: -20px;
+  font-family: helvetica; }
+  .prod_text a {
+    text-decoration: none;
+    color: #1f1f1f; }
+  .prod_text .prod_name {
+    text-align: center; }

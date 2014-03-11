@@ -8,16 +8,16 @@
 	<!-- also add a shopping cart link up here (or maybe in the nav?) -->
 
 	<!-- and heres the product list-->
+	<div id="container">
 	{% for product in products %}
 
 		<div class="prod_thumb">
 			<a href="/store/product/{{ product.slug }}/"><img src="{{ MEDIA_URL }}{{ product.thumb }}" /></a>
-			<span class="text">
-				<h1 class="prod_name">{{ product.name }}</h1>
-				<h2 class="prod price">{{ product.price}}</h2>
-			</span>
-		</div>
-
+			<div class="prod_text">
+				<a href="/store/product/{{ product.slug }}/"><h1 class="prod_name">{{ product.name }}</h1></a>
+			</div>
+		</div> <!-- end thumbnail -->
 	{% endfor %}
+	</div>
 
 {% endblock %}
