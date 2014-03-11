@@ -14,7 +14,25 @@
 {% block js_call %}
 <script>
     jQuery(function(){
-      jQuery('#world-map').vectorMap();
-    });
+      jQuery('#world-map').vectorMap({
+     map: 'world_mill_en',
+    scaleColors: ['#C8EEFF', '#0071A4'],
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    markerStyle: {
+      initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+      }
+    },
+    backgroundColor: '#383f47',
+    markers: [
+    {% for stockers in stockists %}
+      {latLng: [{{ stockers.location }}], name: '{{ stockers.name }}'},
+     {% endfor %}
+    ]
+  });
+});
 </script>
 {% endblock %}

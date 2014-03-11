@@ -12,9 +12,9 @@
 	{% for product in products %}
 
 		<div class="prod_thumb">
-			<a href="/store/product/{{ product.slug }}/"><img src="{{ MEDIA_URL }}{{ product.thumb }}" /></a>
+			<a href="/store/product/{{ product.slug }}/"><img src="{{ MEDIA_URL }}{{ product.thumb }}" />
 			<div class="prod_text">
-				<a href="/store/product/{{ product.slug }}/"><h1 class="prod_name">{{ product.name }}</h1></a>
+				<h1 class="prod_name">{{ product.name }}</h1>
 			</div>
 		</div> <!-- end thumbnail -->
 	{% endfor %}

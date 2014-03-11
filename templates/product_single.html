@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
+{% block js_call %}
+<script src="js/simpleCart.js" ></script>
+<script>
+	simpleCart({
+		checkout: {
+			type: "PayPal",
+			email: "you@yours.com"
+		}
+	});
+</script>
+{% endblock %}
 
 {% block content %}
 
@@ -8,14 +19,20 @@
 	<!-- also add a shopping cart link up here (or maybe in the nav?) -->
 
 	<!-- and heres the product list-->
-
-		<div class="prod_thumb">
+		<div id="container">
+		<div class="sing_prod_thumb">
 			<img src="{{ MEDIA_URL }}{{ product.thumb }}" />
-			<span class="text">
-				<h1 class="prod_name">{{ product.name }}</h1>
+			<div class="text simpleCart_shelfItem">
+				<h1 class="prod_name item_name">{{ product.name }}</h1>
 				<p class="prod_desc">{{ product.description }}</p>
-				<h2 class="prod price">${{ product.price }}</h2>
-			</span>
+				<h2 class="prod_price item_price">${{ product.price }}</h2>
+				<div id="cart-buttons">
+				<h1><a class="item_add" href="javascript:;">ADD TO CART</a></h1>
+				<h1>VIEW CART/CHECKOUT</h1>
+				<span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
+			</div>
+			</div>
+		</div>
 		</div>
 
 

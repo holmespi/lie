@@ -52,7 +52,7 @@ $(document).ready(function() {
 			<li><a href="#"><img src="{% static 'img/facebook.png' %}" /></a></li>
 			<li><a href="#"><img src="{% static 'img/ig.png' %}" /></a></li>
 			<li><a href="#"><img src="{% static 'img/vimeo.png' %}" /></a></li>
-			<li><a href="#"><img src="{% static 'img/mail.png' %}" /></a></li>		
+			<li><a href="#"><img src="{% static 'img/twitter.png' %}" /></a></li>		
 		</ul>
 	</div>
 
@@ -65,12 +65,12 @@ $(document).ready(function() {
 
 	<div id="nav">
 		<ul id="nav_links">
-			<li><a href="/store/">Store</a></li>
-			<li><a href="/news/">News</a></li>
-			<li><a href="/collections/">Collections</a></li>
-			<li><a href="/stockists/">Stockists</a></li>
-			<li><a href="/deadstock/">Deadstock</a></li>
-			<li><a href="/contact/">Contact</a></li>		
+			<li {% if request.path == '/store/' %} class="border" {% endif %} ><a href="/store/">Store</a></li>
+			<li {% if request.path == '/news/' %} class="border" {% endif %} ><a href="/news/">News</a></li>
+			<li {% if request.path == '/collections/' %} class="border" {% endif %} ><a href="/collections/">Collections</a></li>
+			<li {% if request.path == '/stockists/' %} class="border" {% endif %} ><a href="/stockists/">Stockists</a></li>
+			<li {% if request.path == '/deadstock/' %} class="border" {% endif %} ><a href="/deadstock/">Deadstock</a></li>
+			<li {% if request.path == '/contact/' %} class="border" {% endif %} ><a href="/contact/">Contact</a></li>		
 		</ul>
 	</div>
 
