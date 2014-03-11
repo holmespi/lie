@@ -7,6 +7,7 @@ from content.models import Slider
 from content.models import Product
 from content.models import Post
 from content.models import Collection
+from content.models import Stockist
 
 
 def home(request):
@@ -111,8 +112,12 @@ def collections(request):
 
 def stockists(request):
 	context = RequestContext(request)
+	stockist_list = Stockist.objects.all()
+	context_dict = {
 
-	return render_to_response('stockists.html', context)
+	}
+	context_dict['stockists'] = stockist_list 
+	return render_to_response('stockists.html', context_dict, context)
 
 
 ##Feeds
