@@ -1,0 +1,89 @@
+/* put vars here */
+/* STYLES */
+hr {
+  color: black;
+  background-color: black;
+  height: 1px; }
+
+#social {
+  float: right; }
+  @media screen and (max-width: 480px) {
+    #social {
+      float: left; } }
+  #social ul {
+    list-style: none;
+    height: 32px;
+    margin-top: 0px; }
+    @media screen and (max-width: 480px) {
+      #social ul {
+        margin-left: -20px;
+        margin-right: 20px; } }
+    #social ul li {
+      float: left; }
+      @media screen and (max-width: 480px) {
+        #social ul li {
+          float: none; } }
+      #social ul li img {
+        width: 32px; }
+        @media screen and (max-width: 480px) {
+          #social ul li img {
+            width: 24px;
+            margin-top: -2px; } }
+
+#socialm {
+  display: none; }
+  @media screen and (max-width: 480px) {
+    #socialm {
+      display: inline-block; } }
+
+/* Logo */
+#logo {
+  width: 70px;
+  height: 60px;
+  margin: 0 auto; }
+  @media screen and (max-width: 480px) {
+    #logo {
+      float: left;
+      margin: none; } }
+  #logo img {
+    width: 70px; }
+    @media screen and (max-width: 480px) {
+      #logo img {
+        width: 120px; } }
+
+/* Nav */
+#nav {
+  text-align: center; }
+
+#nav_links {
+  list-style: none;
+  height: 25px;
+  margin-top: 10px; }
+  @media screen and (max-width: 480px) {
+    #nav_links {
+      float: right;
+      width: 80px;
+      height: 110px;
+      margin-top: 0; } }
+  #nav_links li {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline; }
+    @media screen and (max-width: 480px) {
+      #nav_links li {
+        float: right; } }
+    #nav_links li a {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: helvetica;
+      text-transform: uppercase; }
+      @media screen and (max-width: 480px) {
+        #nav_links li a {
+          font-size: 12px; } }
+
+/* Homepage */
+#slideshow {
+  right: 8px;
+  overflow: hidden; }

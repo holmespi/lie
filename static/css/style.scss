@@ -1,0 +1,130 @@
+/* put vars here */
+$bs: "screen and (max-width: 480px)";
+$bm: "screen and (min-width: 321px) and (max-width: 768px)";
+$bl: "screen and (max-width: 950px)";
+
+
+/* STYLES */
+
+hr {
+	color: black;
+	background-color: black;
+	height: 1px;
+}
+
+#social {
+	float: right;
+
+	@media #{$bs} {
+		float: left;
+	}
+	ul {
+		list-style: none;
+		height: 32px;
+		margin-top: 0px;
+		@media #{$bs} {
+				margin-left: -20px;
+				margin-right:20px;
+			}
+		li {
+			float: left;
+			@media #{$bs} {
+				float: none;
+			}
+			img {
+				width: 32px;
+				@media #{$bs} {
+					width: 24px;
+					margin-top: -2px;
+				}
+			}
+		}
+	}
+}
+
+#socialm {
+	display: none;
+
+	@media #{$bs} {
+		display: inline-block;
+
+	}
+}
+
+/* Logo */
+
+#logo {
+	width: 70px;
+	height: 60px;
+	margin: 0 auto;
+
+	@media #{$bs} {
+		float: left;
+		margin: none;
+	}
+
+	img {
+		width: 70px;
+
+		@media #{$bs} {
+			width: 120px;
+		}
+	}
+}
+
+
+/* Nav */
+#nav {
+	text-align: center;
+}
+#nav_links {
+	list-style: none;
+	height: 25px;
+	margin-top: 10px;
+
+
+	@media #{$bs} {
+		float: right;
+		width: 80px;
+		height: 110px;
+		margin-top: 0;
+	}
+
+	li {
+		padding-left: 20px;
+		padding-right: 20px;
+		display: inline;
+
+		@media #{$bs} {
+			float: right;
+		}
+
+
+
+
+		a {
+			text-decoration: none;
+			color: black;
+			font-size: 14px;
+			font-weight: 600;
+			font-family: helvetica;
+			text-transform: uppercase;
+
+			@media #{$bs} {
+				font-size: 12px;
+			}
+			
+		}
+	}
+}
+
+
+/* Homepage */
+
+#slideshow {
+	right: 8px;
+	overflow: hidden;
+}
+
+
+
