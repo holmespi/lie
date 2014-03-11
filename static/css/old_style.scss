@@ -1,6 +1,6 @@
 /* put vars here */
 $bs: "screen and (max-width: 480px)";
-$bm: "screen and (min-width: 481px) and (max-width: 960px)";
+$bm: "screen and (min-width: 321px) and (max-width: 768px)";
 $bl: "screen and (max-width: 950px)";
 $dark: #1F1F1F;
 
@@ -11,21 +11,9 @@ hr {
 	background-color: black;
 	height: 1px;
 }
-h1 {
-	font-size: 20px;
-	text-transform: uppercase;
-	font-family: helvetica;
-}
-h2 {
-	font-size: 20px;
-	text-transform: uppercase;
-}
-p {
-	font-family: helvetica;
-}
 
 #container {
-	max-width: 900px;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -56,12 +44,6 @@ p {
 				}
 			}
 		}
-	}
-}
-li.border {
-	border: 3px solid $dark;
-	a {
-		color: $dark;
 	}
 }
 
@@ -151,29 +133,11 @@ li.border {
 
 /* store */
 
-#container {
-
-}
-
 .prod_thumb {
 	float: left;
-	margin-left: 145px;
-	@media #{$bm} {
-			float: none;
-			width: 275px;
-			margin: 0 auto;
-		}
+	margin-left: 110px;
 	img {
-		width: 250px;
-		@media #{$bm} {
-			width: 275px;
-			margin-left: 0 auto;
-		}
-		
-	}
-	a {
-		text-decoration: none;
-		color: $dark;
+		width: 300px;
 	}
 
 
@@ -181,7 +145,7 @@ li.border {
 
 .prod_text {
 	margin: 0 auto;
-	margin-top: -10px;
+	margin-top: -20px;
 	font-family: helvetica;
 	a {
 		text-decoration: none;
@@ -192,22 +156,5 @@ li.border {
 		text-align: center;
 	}
 }
-
-/* single product */
-.sing_prod_thumb {
-	img {
-		width: 400px;
-		float: left;
-		margin-left:40px;
-	}
-	.text {
-		float: left;
-		width: 300px;
-		text-align: justify;
-		margin-top: 50px;
-		margin-left: 100px;
-	}
-}
-
 
 
