@@ -27,6 +27,18 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
+if os.environ.get('DATABASE_URL', None):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'dbavgstovg3otg',                      # Or path to database file if using sqlite3.
+            # The following settings are not used with sqlite3:
+            'USER': 'mshzkvmbozqhly',
+            'PASSWORD': 'oOr8Bf6MMKskXE-nLef-vJqEIs',
+            'HOST': 'ec2-54-204-21-178.compute-1.amazonaws.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+            'PORT': '5432',                      # Set to empty string for default.
+        }
+    }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -69,7 +81,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = 'staticfiles'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
